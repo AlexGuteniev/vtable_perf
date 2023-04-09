@@ -13,14 +13,14 @@ struct S
 struct S1 : S
 {
     void f1() override { i++; }
-    __declspec(noinline) void f2() { i++;  }
+    void f2() { i++;  }
     alignas(128) volatile int i = 0;
 } s1;
 
 struct S2 : S
 {
     void f1() override { j--; }
-    __declspec(noinline) void f2() { j--; }
+    void f2() { j--; }
     alignas(128) volatile int j = 0;
 } s2;
 
